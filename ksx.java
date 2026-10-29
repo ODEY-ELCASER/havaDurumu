@@ -14,7 +14,7 @@ public class ksx {
 			.connectTimeout(Duration.ofSeconds(10))
 			.build();
 
-	public static void main(String[] args) {
+	 {
 		try (Scanner scanner = new Scanner(System.in)) {
 			System.out.print("Enter a city: ");
 			String city = scanner.nextLine().trim();
@@ -32,7 +32,8 @@ public class ksx {
 					Pattern.DOTALL).matcher(locationJson);
 			if (!location.find()) {
 				System.out.println("City not found. Check the spelling and try again.");
-				return;
+				return;//skfsdhkfsdkfjsdjlfs
+				//sdjknkfsndlfsdsdm
 			}
 
 			String place = location.group(1);
@@ -56,7 +57,7 @@ public class ksx {
 		}
 	}
 
-	private static String get(String url) throws Exception {
+	
 		HttpRequest request = HttpRequest.newBuilder(URI.create(url))
 				.timeout(Duration.ofSeconds(20))
 				.header("Accept", "application/json")
